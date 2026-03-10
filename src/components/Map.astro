@@ -1,15 +1,24 @@
 ---
 ---
 
-<section class="map-section">
-  <div class="container">
-    <div class="header">
-      <h2>We Put Local Brands on the Map</h2>
-      <p>Our <strong>network</strong> spans across Denver's most popular neighborhoods and venues</p>
+<section class="bg-[#FFFDF1] py-[80px] px-[20px] font-['DM_Sans',sans-serif]">
+  <div class="max-w-[1200px] mx-auto">
+
+    <!-- Header -->
+    <div class="mb-[40px]">
+      <h2 class="font-['Playfair_Display',serif] text-[32px] md:text-[42px] text-[#1a3a52] mb-[12px] font-bold">
+        We Put Local Brands on the Map
+      </h2>
+      <p class="text-[#666] text-[16px]">
+        Our <strong>network</strong> spans across Denver's most popular neighborhoods and venues
+      </p>
     </div>
 
-    <div class="map-container">
-      <div class="map-placeholder">
+    <!-- Map Container -->
+    <div class="flex flex-col md:flex-row gap-0 bg-white rounded-[8px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.1)] min-h-[500px]">
+
+      <!-- Map -->
+      <div class="flex-[2] relative min-h-[400px] md:min-h-[500px]">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196281.09457062354!2d-105.02270839999999!3d39.7643389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b80aa231f17cf%3A0x118ef4f8278a36d6!2sDenver%2C%20CO!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
           width="100%"
@@ -17,173 +26,65 @@
           style="border:0;"
           allowfullscreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
+          referrerpolicy="no-referrer-when-downgrade"
+          class="absolute inset-0 w-full h-full">
         </iframe>
       </div>
 
-      <div class="locations-panel">
-        <h3>OUR LOCATIONS</h3>
-        <p class="subtitle">Browse the venues in our network while exploring the map.</p>
-        
-        <div class="location-list">
-          <div class="location-item">
-            <div class="icon">
+      <!-- Locations Panel -->
+      <div class="flex-1 px-[30px] py-[40px] bg-white border-t md:border-t-0 md:border-l border-[#e0e0e0]">
+        <h3 class="text-[18px] font-bold mb-[8px] text-black tracking-[0.5px]">
+          OUR LOCATIONS
+        </h3>
+        <p class="text-[#666] text-[14px] mb-[30px] leading-[1.5]">
+          Browse the venues in our network while exploring the map.
+        </p>
+
+        <div class="flex flex-col gap-[20px]">
+
+          <!-- Aurora -->
+          <div class="flex items-center gap-[12px] p-[12px] border border-[#e0e0e0] rounded-[4px] cursor-pointer transition-all duration-300 hover:bg-[#f5f5f5] hover:border-[#4285F4]">
+            <div class="flex items-center justify-center">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#4285F4"/>
               </svg>
             </div>
-            <span>Aurora</span>
+            <span class="text-[15px] text-[#333] font-medium">Aurora</span>
           </div>
 
-          <div class="location-item">
-            <div class="icon">
+          <!-- Lakewood -->
+          <div class="flex items-center gap-[12px] p-[12px] border border-[#e0e0e0] rounded-[4px] cursor-pointer transition-all duration-300 hover:bg-[#f5f5f5] hover:border-[#4285F4]">
+            <div class="flex items-center justify-center">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#4285F4"/>
               </svg>
             </div>
-            <span>Lakewood</span>
+            <span class="text-[15px] text-[#333] font-medium">Lakewood</span>
           </div>
 
-          <div class="location-item">
-            <div class="icon">
+          <!-- Arvada -->
+          <div class="flex items-center gap-[12px] p-[12px] border border-[#e0e0e0] rounded-[4px] cursor-pointer transition-all duration-300 hover:bg-[#f5f5f5] hover:border-[#4285F4]">
+            <div class="flex items-center justify-center">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#4285F4"/>
               </svg>
             </div>
-            <span>Arvada</span>
+            <span class="text-[15px] text-[#333] font-medium">Arvada</span>
           </div>
 
-          <div class="location-item">
-            <div class="icon">
+          <!-- Centennial -->
+          <div class="flex items-center gap-[12px] p-[12px] border border-[#e0e0e0] rounded-[4px] cursor-pointer transition-all duration-300 hover:bg-[#f5f5f5] hover:border-[#4285F4]">
+            <div class="flex items-center justify-center">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#4285F4"/>
               </svg>
             </div>
-            <span>Centennial</span>
+            <span class="text-[15px] text-[#333] font-medium">Centennial</span>
           </div>
+
         </div>
       </div>
     </div>
+
   </div>
 </section>
-
-<style>
-  .map-section {
-    background: #FFFDF1;
-    padding: 80px 20px;
-    font-family: "DM Sans", sans-serif;
-  }
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .header {
-    margin-bottom: 40px;
-  }
-
-  h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 42px;
-    color: #1a3a52;
-    margin-bottom: 12px;
-    font-weight: 700;
-  }
-
-  .header p {
-    color: #666;
-    font-size: 16px;
-  }
-
-  .map-container {
-    display: flex;
-    gap: 30px;
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    min-height: 500px;
-  }
-
-  .map-placeholder {
-    flex: 2;
-    position: relative;
-    min-height: 500px;
-  }
-
-  .locations-panel {
-    flex: 1;
-    padding: 40px 30px;
-    background: white;
-    border-left: 1px solid #e0e0e0;
-  }
-
-  h3 {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    color: #000;
-    letter-spacing: 0.5px;
-  }
-
-  .subtitle {
-    color: #666;
-    font-size: 14px;
-    margin-bottom: 30px;
-    line-height: 1.5;
-  }
-
-  .location-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .location-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px;
-    border: 1px solid #e0e0e0;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-
-  .location-item:hover {
-    background: #f5f5f5;
-    border-color: #4285F4;
-  }
-
-  .icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .location-item span {
-    font-size: 15px;
-    color: #333;
-    font-weight: 500;
-  }
-
-  @media (max-width: 968px) {
-    .map-container {
-      flex-direction: column;
-    }
-
-    .locations-panel {
-      border-left: none;
-      border-top: 1px solid #e0e0e0;
-    }
-
-    h2 {
-      font-size: 32px;
-    }
-
-    .map-placeholder {
-      min-height: 400px;
-    }
-  }
-</style>

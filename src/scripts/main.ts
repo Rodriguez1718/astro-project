@@ -21,4 +21,5 @@ const createParallax = (elementId: string, options: ParallaxOptions = {}): void 
 // Usage — add as many as you want, each with their own speed
 createParallax('parallax-img');
 createParallax('parallax-img-2', { speed: 0.1 });
+createParallax('parallax-img-3', { speed: 0.1 });
 createParallax('parallax-text', { speed: 0.5 });

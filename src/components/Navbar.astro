@@ -1,154 +1,480 @@
 ---
-// Navbar component
+ // Navbar component
 ---
 
-<nav class="navbar">
-  <div class="container">
+<nav class="fixed top-0 left-0 right-0 bg-[#FFFDF1] backdrop-blur-md shadow-[0_2px_10px_rgba(0,0,0,0.1)] z-[1000] w-full">
+  <div class="max-w-[1200px] mx-auto px-8 py-[20px] flex items-center justify-between gap-8 font-['DM_Sans',sans-serif]">
+
     <a href="/" class="logo">
-      <img src="https://ntv-template-5.vercel.app/logo/dealer-logo.avif" alt="">
+      <img src="https://ntv-template-5.vercel.app/logo/dealer-logo.avif"
+        class="w-[48px] h-[48px] max-w-[48px] max-h-[48px]" />
     </a>
-    
-    <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#indoor-billboards">Indoor Billboards</a></li>
-      <li><a href="#solutions">Solutions</a></li>
+
+    <ul class="hidden md:flex lg:flex gap-[2rem] flex-1 justify-center m-0 p-0 list-none">
+      
+      <!-- Home -->
+      <li>
+        <a href="/"
+        class="relative no-underline text-[#333] font-medium transition-colors duration-300 hover:text-[#C4A05A]
+
+        after:content-['']
+        after:absolute
+        after:left-[0]
+        after:bottom-[-5px]
+        after:h-[2px]
+        after:w-full
+        after:bg-[#C4A05A]
+
+        after:origin-left
+        after:scale-x-0
+        after:transition-transform
+        after:duration-300
+        after:ease-out
+
+        hover:after:scale-x-100">
+        Home
+        </a>
+      </li>
+
+      <!-- About -->
+      <li>
+        <a href="#about"
+          class="relative no-underline text-[#333] font-medium transition-colors duration-300 hover:text-[#C4A05A]
+
+          after:content-['']
+          after:absolute
+          after:left-[0]
+          after:bottom-[-5px]
+          after:h-[2px]
+          after:w-full
+          after:bg-[#C4A05A]
+
+          after:origin-left
+          after:scale-x-0
+          after:transition-transform
+          after:duration-300
+          after:ease-out
+
+          hover:after:scale-x-100">
+          About Us
+        </a>
+      </li>
+
+      <!-- Indoor Billboards Dropdown -->
+      <li class="relative group">
+        <a href="#indoor-billboards"
+          class="relative no-underline text-[#333] font-medium transition-colors duration-300 hover:text-[#C4A05A] flex items-center gap-1
+
+          after:content-['']
+          after:absolute
+          after:left-[0]
+          after:bottom-[-5px]
+          after:h-[2px]
+          after:w-full
+          after:bg-[#C4A05A]
+
+          after:origin-left
+          after:scale-x-0
+          after:transition-transform
+          after:duration-300
+          after:ease-out
+
+          hover:after:scale-x-100">
+          Indoor Billboards
+          <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </a>
+        
+        <!-- Dropdown Menu -->
+        <div class="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+          <div class="p-4">
+            
+            <!-- Become a Venue Partner -->
+            <a href="#venue-partner" class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-200 group/item">
+              <div class="flex-shrink-0 w-8 h-8 bg-[#F0EBD8] rounded-lg flex items-center justify-center mt-1">
+                <svg class="w-5 h-5 text-[#C4A05A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 group-hover/item:text-[#C4A05A] transition-colors">Become a Venue Partner</h3>
+                <p class="text-sm text-gray-600 mt-1">Join our network of premium venues to reach engaged audiences</p>
+              </div>
+            </a>
+
+            <!-- Locations -->
+            <a href="#locations" class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-200 group/item">
+              <div class="flex-shrink-0 w-8 h-8 bg-[#F0EBD8] rounded-lg flex items-center justify-center mt-1">
+                <svg class="w-5 h-5 text-[#C4A05A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 group-hover/item:text-[#C4A05A] transition-colors">Locations</h3>
+                <p class="text-sm text-gray-600 mt-1">Our network of indoor digital billboards is located within retail spaces</p>
+              </div>
+            </a>
+
+            <!-- Screen Advertising -->
+            <a href="#screen-advertising" class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-200 group/item">
+              <div class="flex-shrink-0 w-8 h-8 bg-[#F0EBD8] rounded-lg flex items-center justify-center mt-1">
+                <svg class="w-5 h-5 text-[#C4A05A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 group-hover/item:text-[#C4A05A] transition-colors">Screen Advertising</h3>
+                <p class="text-sm text-gray-600 mt-1">Advertise on screens in your local community to reach your target audience</p>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </li>
+
+      <!-- Solutions Dropdown -->
+      <li class="relative group">
+        <a href="#solutions"
+          class="relative no-underline text-[#333] font-medium transition-colors duration-300 hover:text-[#C4A05A] flex items-center gap-1
+
+          after:content-['']
+          after:absolute
+          after:left-[0]
+          after:bottom-[-5px]
+          after:h-[2px]
+          after:w-full
+          after:bg-[#C4A05A]
+
+          after:origin-left
+          after:scale-x-0
+          after:transition-transform
+          after:duration-300
+          after:ease-out
+
+          hover:after:scale-x-100">
+          Solutions
+          <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </a>
+        
+        <!-- Dropdown Menu -->
+        <div class="absolute top-full left-0 mt-2 w-[600px] bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+          <div class="p-6">
+            
+            <!-- Grid Layout -->
+            <div class="grid grid-cols-2 gap-8">
+              
+              <!-- Left Column -->
+              <div>
+                <!-- FOUNDATIONAL Section -->
+                <div class="mb-6">
+                  <h4 class="text-xs font-semibold text-[#C4A05A] uppercase tracking-wider mb-3">FOUNDATIONAL</h4>
+                  
+                  <a href="#website-design" class="flex items-start gap-3 p-2 rounded-lg hover:bg-gray-50 transition-colors duration-200 group/item mb-3">
+                    <div class="flex-shrink-0 w-6 h-6 bg-[#F0EBD8] rounded-full flex items-center justify-center mt-1">
+                      <svg class="w-4 h-4 text-[#C4A05A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h5 class="font-semibold text-gray-900 group-hover/item:text-[#C4A05A] transition-colors text-sm">Website Design</h5>
+                      <p class="text-xs text-gray-600 mt-1">Custom website design & development to achieve your unique goals and maximize...</p>
+                    </div>
+                  </a>
+
+                  <a href="#social-media-management" class="flex items-start gap-3 p-2 rounded-lg hover:bg-gray-50 transition-colors duration-200 group/item">
+                    <div class="flex-shrink-0 w-6 h-6 bg-[#F0EBD8] rounded-full flex items-center justify-center mt-1">
+                      <svg class="w-4 h-4 text-[#C4A05A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h5 class="font-semibold text-gray-900 group-hover/item:text-[#C4A05A] transition-colors text-sm">Social Media Management</h5>
+                      <p class="text-xs text-gray-600 mt-1">Build and engage your audience across all major social platforms.</p>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- LEAD GEN Section -->
+                <div class="mb-6">
+                  <h4 class="text-xs font-semibold text-[#C4A05A] uppercase tracking-wider mb-3">LEAD GEN</h4>
+                  
+                  <a href="#social-media-advertising" class="flex items-start gap-3 p-2 rounded-lg hover:bg-gray-50 transition-colors duration-200 group/item">
+                    <div class="flex-shrink-0 w-6 h-6 bg-[#F0EBD8] rounded-full flex items-center justify-center mt-1">
+                      <svg class="w-4 h-4 text-[#C4A05A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h5 class="font-semibold text-gray-900 group-hover/item:text-[#C4A05A] transition-colors text-sm">Social Media Advertising</h5>
+                      <p class="text-xs text-gray-600 mt-1">Professional social media advertising services to drive targeted traffic and...</p>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- BRANDING & AWARENESS Section -->
+                <div>
+                  <h4 class="text-xs font-semibold text-[#C4A05A] uppercase tracking-wider mb-3">BRANDING & AWARENESS</h4>
+                  
+                  <a href="#connected-tv" class="flex items-start gap-3 p-2 rounded-lg hover:bg-gray-50 transition-colors duration-200 group/item">
+                    <div class="flex-shrink-0 w-6 h-6 bg-[#F0EBD8] rounded-full flex items-center justify-center mt-1">
+                      <svg class="w-4 h-4 text-[#C4A05A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h5 class="font-semibold text-gray-900 group-hover/item:text-[#C4A05A] transition-colors text-sm">Connected TV (OTT Ads)</h5>
+                      <p class="text-xs text-gray-600 mt-1">Reach audiences on streaming platforms...</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right Column -->
+              <div>
+                <!-- Right side services -->
+                <div class="mb-6">
+                  <a href="#google-business-profile" class="flex items-start gap-3 p-2 rounded-lg hover:bg-gray-50 transition-colors duration-200 group/item mb-3">
+                    <div class="flex-shrink-0 w-6 h-6 bg-[#F0EBD8] rounded-full flex items-center justify-center mt-1">
+                      <svg class="w-4 h-4 text-[#C4A05A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h5 class="font-semibold text-gray-900 group-hover/item:text-[#C4A05A] transition-colors text-sm">Google Business Profile</h5>
+                      <p class="text-xs text-gray-600 mt-1">Optimize your local presence and get found by customers searching for your...</p>
+                    </div>
+                  </a>
+
+                  <a href="#design-services" class="flex items-start gap-3 p-2 rounded-lg hover:bg-gray-50 transition-colors duration-200 group/item mb-3">
+                    <div class="flex-shrink-0 w-6 h-6 bg-[#F0EBD8] rounded-full flex items-center justify-center mt-1">
+                      <svg class="w-4 h-4 text-[#C4A05A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17v4a2 2 0 002 2h4M15 5l2 2"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h5 class="font-semibold text-gray-900 group-hover/item:text-[#C4A05A] transition-colors text-sm">Design Services</h5>
+                      <p class="text-xs text-gray-600 mt-1">Professional design services to elevate your brand identity.</p>
+                    </div>
+                  </a>
+
+                  <a href="#pay-per-click" class="flex items-start gap-3 p-2 rounded-lg hover:bg-gray-50 transition-colors duration-200 group/item mb-3">
+                    <div class="flex-shrink-0 w-6 h-6 bg-[#F0EBD8] rounded-full flex items-center justify-center mt-1">
+                      <svg class="w-4 h-4 text-[#C4A05A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h5 class="font-semibold text-gray-900 group-hover/item:text-[#C4A05A] transition-colors text-sm">Pay Per Click</h5>
+                      <p class="text-xs text-gray-600 mt-1">Professional pay-per-click advertising services to drive targeted traffic and...</p>
+                    </div>
+                  </a>
+
+                  <a href="#display-geofencing" class="flex items-start gap-3 p-2 rounded-lg hover:bg-gray-50 transition-colors duration-200 group/item">
+                    <div class="flex-shrink-0 w-6 h-6 bg-[#F0EBD8] rounded-full flex items-center justify-center mt-1">
+                      <svg class="w-4 h-4 text-[#C4A05A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h5 class="font-semibold text-gray-900 group-hover/item:text-[#C4A05A] transition-colors text-sm">Display (Geofencing)</h5>
+                      <p class="text-xs text-gray-600 mt-1">Location-based display advertising that...</p>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Featured Section -->
+                <div class="bg-gray-50 p-4 rounded-lg">
+                  <h4 class="text-xs font-semibold text-[#C4A05A] uppercase tracking-wider mb-2">FEATURED</h4>
+                  <div class="bg-white rounded-lg p-3">
+                    <img src="/api/placeholder/120/80" alt="Pay Per Click" class="w-full h-16 object-cover rounded mb-2">
+                    <h5 class="font-semibold text-sm text-gray-900 mb-1">Pay Per Click</h5>
+                    <p class="text-xs text-gray-600 mb-2">Professional pay-per-click advertising services to drive targeted traffic and conversions.</p>
+                    <a href="#learn-more" class="text-xs text-[#C4A05A] hover:text-blue-800 font-medium">Learn More →</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </li>
+
     </ul>
-    
-    <a href="#contact" class="btn-contact">Contact Us</a>
-    
-    <button class="mobile-toggle" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-      <span></span>
+
+    <!-- Contact Button -->
+    <a href="#contact"
+      class="px-6 py-3 bg-[black] text-[#FFFDF1] no-underline rounded-[5px] font-semibold p-[10px]
+      transition-all duration-300
+      hover:bg-[#313131]
+      hover:-translate-y-[2px]
+      hover:shadow-[0_4px_12px_rgba(88,88,88,0.3)] hidden md:flex">
+      Contact Us
+    </a>
+
+    <!-- Mobile Toggle -->
+    <button class="mobile-toggle flex md:hidden flex-col gap-[4px] bg-transparent border-none cursor-pointer p-2" id="mobile-toggle">
+      <span class="w-[25px] h-[3px] bg-[#333] rounded-[2px] transition-all duration-300"></span>
+      <span class="w-[25px] h-[3px] bg-[#333] rounded-[2px] transition-all duration-300"></span>
+      <span class="w-[25px] h-[3px] bg-[#333] rounded-[2px] transition-all duration-300"></span>
     </button>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu fixed top-[88px] left-0 right-0 bg-[#FFFDF1] shadow-lg transform -translate-y-full opacity-0 invisible transition-all duration-300 z-40 md:hidden" id="mobile-menu">
+    <div class="px-8 py-6">
+      <ul class="space-y-6">
+        
+        <!-- Home -->
+        <li>
+          <a href="/" class="block text-[#333] font-medium text-lg hover:text-[#C4A05A] transition-colors">
+            Home
+          </a>
+        </li>
+
+        <!-- About Us -->
+        <li>
+          <a href="#about" class="block text-[#333] font-medium text-lg hover:text-[#C4A05A] transition-colors">
+            About Us
+          </a>
+        </li>
+
+        <!-- Indoor Billboards -->
+        <li class="mobile-dropdown">
+          <button class="flex items-center justify-between w-full text-[#333] font-medium text-lg hover:text-[#C4A05A] transition-colors mobile-dropdown-toggle">
+            Indoor Billboards
+            <svg class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="mobile-dropdown-content max-h-0 overflow-hidden transition-all duration-300">
+            <div class="pt-4 pl-4 space-y-3">
+              <a href="#venue-partner" class="block text-[#666] hover:text-[#C4A05A] transition-colors">
+                Become a Venue Partner
+              </a>
+              <a href="#locations" class="block text-[#666] hover:text-[#C4A05A] transition-colors">
+                Locations
+              </a>
+              <a href="#screen-advertising" class="block text-[#666] hover:text-[#C4A05A] transition-colors">
+                Screen Advertising
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <!-- Solutions -->
+        <li class="mobile-dropdown">
+          <button class="flex items-center justify-between w-full text-[#333] font-medium text-lg hover:text-[#C4A05A] transition-colors mobile-dropdown-toggle">
+            Solutions
+            <svg class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="mobile-dropdown-content max-h-0 overflow-hidden transition-all duration-300">
+            <div class="pt-4 pl-4 space-y-3">
+              <a href="#website-design" class="block text-[#666] hover:text-[#C4A05A] transition-colors">
+                Website Design
+              </a>
+              <a href="#social-media-management" class="block text-[#666] hover:text-[#C4A05A] transition-colors">
+                Social Media Management
+              </a>
+              <a href="#social-media-advertising" class="block text-[#666] hover:text-[#C4A05A] transition-colors">
+                Social Media Advertising
+              </a>
+              <a href="#google-business-profile" class="block text-[#666] hover:text-[#C4A05A] transition-colors">
+                Google Business Profile
+              </a>
+              <a href="#design-services" class="block text-[#666] hover:text-[#C4A05A] transition-colors">
+                Design Services
+              </a>
+              <a href="#pay-per-click" class="block text-[#666] hover:text-[#C4A05A] transition-colors">
+                Pay Per Click
+              </a>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+
+      <!-- Mobile Contact Button -->
+      <div class="mt-8">
+        <a href="#contact" class="block w-full text-center px-6 py-3 bg-[black] text-[#FFFDF1] no-underline rounded-[5px] font-semibold transition-all duration-300 hover:bg-[#313131]">
+          Contact Us
+        </a>
+      </div>
+    </div>
   </div>
 </nav>
 
-<style>
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: #FFFDF1;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-  }
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    font-family: "DM Sans", sans-serif;
-  }
-
-  .logo {
-    img {
-        width: 48px;
-        height: 48px;
-        max-width: 48px;
-        max-height: 48px;
-    }
-  }
-
-  .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-    flex: 1;
-    justify-content: center;
-  }
-
-  .nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s;
-    position: relative;
-  }
-
-  .nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: ##C4A05A;
-    transition: width 0.3s;
-  }
-
-  .nav-links a:hover {
-    color: ##C4A05A;
-  }
-
-  .nav-links a:hover::after {
-    width: 100%;
-  }
-
-  .btn-contact {
-    padding: 0.75rem 1.5rem;
-    background: black;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: all 0.3s;
-  }
-
-  .btn-contact:hover {
-    background: #313131;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(88, 88, 88, 0.3);
-  }
-
-  .mobile-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 4px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-  }
-
-  .mobile-toggle span {
-    width: 25px;
-    height: 3px;
-    background: #333;
-    border-radius: 2px;
-    transition: all 0.3s;
-  }
-
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-    }
-
-    .mobile-toggle {
-      display: flex;
-    }
-
-    .btn-contact {
-      padding: 0.5rem 1rem;
-      font-size: 0.9rem;
-    }
-  }
-</style>
-
 <script>
-  const toggle = document.querySelector('.mobile-toggle');
-  const navLinks = document.querySelector('.nav-links');
-  
-  toggle?.addEventListener('click', () => {
-    navLinks?.classList.toggle('active');
+  // Mobile menu toggle
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+
+  // Toggle mobile menu
+  mobileToggle?.addEventListener('click', () => {
+    const isOpen = mobileMenu?.classList.contains('menu-open');
+    
+    if (isOpen) {
+      // Close menu
+      mobileMenu?.classList.remove('menu-open');
+      mobileMenu?.classList.add('-translate-y-full', 'opacity-0', 'invisible');
+      mobileMenu?.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      
+      // Reset hamburger
+      const spans = mobileToggle?.querySelectorAll('span');
+      spans?.forEach((span, index) => {
+        span.classList.remove('rotate-45', '-rotate-45', 'translate-y-2', '-translate-y-2', 'opacity-0');
+      });
+    } else {
+      // Open menu
+      mobileMenu?.classList.add('menu-open');
+      mobileMenu?.classList.remove('-translate-y-full', 'opacity-0', 'invisible');
+      mobileMenu?.classList.add('translate-y-0', 'opacity-100', 'visible');
+      
+      // Animate hamburger to X
+      const spans = mobileToggle?.querySelectorAll('span');
+      if (spans) {
+        spans[0].classList.add('rotate-45', 'translate-y-2');
+        spans[1].classList.add('opacity-0');
+        spans[2].classList.add('-rotate-45', '-translate-y-2');
+      }
+    }
+  });
+
+  // Mobile dropdown toggles
+  mobileDropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const dropdown = toggle.parentElement;
+      const content = dropdown?.querySelector('.mobile-dropdown-content') as HTMLElement;
+      const arrow = toggle.querySelector('svg');
+      
+      if (!content) return; // Exit early if content is null
+      
+      const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+      
+      if (isOpen) {
+        content.style.maxHeight = '0px';
+        arrow?.classList.remove('rotate-180');
+      } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        arrow?.classList.add('rotate-180');
+      }
+    });
+  });
+
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!mobileToggle?.contains(e.target as Node) && !mobileMenu?.contains(e.target as Node)) {
+      if (mobileMenu?.classList.contains('menu-open')) {
+        mobileToggle?.click();
+      }
+    }
   });
 </script>
